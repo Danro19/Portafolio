@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
 
-  <body id="body" class="bg-black text-white p-5 transition-colors duration-300">
+  <body id="body" class="bg-black text-white p-5 transition-colors duration-300 flex items-center flex-col">
+
+    <div id="background-container"></div>
     <header id="mainHeader" class="fixed top-0 left-0 w-full bg-black text-white z-50 transition-all duration-300 flex justify-between p-5">
       <!-- Logo -->
       <div id="Logo" class="flex justify-center items-center text-xl logo">
@@ -41,19 +43,140 @@
         <label class="relative inline-flex items-center cursor-pointer">
           <input type="checkbox" value="" class="sr-only peer" id="toggleSwitch">
           <div id="switchBackground" class="w-14 h-8 bg-white rounded-full transition-all duration-300"></div>
-          <div id="switchCircle" class="absolute left-1 top-1 w-6 h-6 bg-black rounded-full transition-transform transition-colors duration-300 peer-checked:translate-x-6"></div>
+          <div id="switchCircle" class="absolute left-1 top-1 w-6 h-6 bg-black border-black rounded-full transition-transform transition-colors duration-300 peer-checked:translate-x-6"></div>
         </label>
         <span id="switchText" class="ml-4 text-lg w-16">Noche</span>
       </div>
     </header>
 
-    <section id="quien-soy">
+    <section id="quien-soy" class=" flex flex-col items-center text-white pt-44 gap-16">
+      <div class="flex justify-center gap-16">
+      <div class="descripcionPerfil flex justify-center flex-col">
+        <h1>
+          Daniel Orlando Rodriguez Ramirez
+        </h1>
+        <h2>Desarrollador Backend</h2>
+        <br>
 
+        <p>
+          Desarrollador Backend con experiencia en lenguajes como Python, JavaScript, MySQL y Java, especializado en <br> proyectos web.  
+          Manejo de metodologías ágiles como Scrum y Kanban, con un  enfoque en la entrega de soluciones <br> de calidad en tiempo y forma. A lo largo 
+          de mi formación, he gestionado equipos de trabajo, demostrando habilidades <br> de liderazgo, como la escucha activa, la comunicación asertiva y el pensamiento divergente. Estas habilidades blandas <br> han sido clave para lograr una colaboración efectiva en el desarrollo de proyectos, optimizando los procesos y <br> alcanzando los objetivos establecidos.
+
+        </p>
+      </div>
+      <div class="imagenPerfil">
+        <img src="" alt="dat">
+      </div>
+    </div>
+    <div id="Video" class="text-white">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Q8HFO4dKIHs?si=W5CQ8m7dMRKelCl0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     </section>
 
-    <script src="js/switch.js">      
-    </script>
-    <script src="js/headerScroll.js">
-    </script>
+    <!-- Skills Section -->
+<section id="skills" class="mt-24 px-10">
+  <h1 class="text-3xl font-bold text-center mb-8">Habilidades</h1>
+
+  <!-- Switch -->
+  <div class="flex justify-center mb-10">
+    <button id="toggleSkills" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
+      Ver Habilidades Blandas
+    </button>
+  </div>
+
+  <!-- Técnicas -->
+  <div id="techSkills" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="skill-card">
+      <img src="icons/python.svg" alt="Python" class="icon-svg">
+      <h2>Python</h2>
+      <p>Básico</p>
+    </div>
+    <div class="skill-card">
+      <img src="icons/javascript.svg" alt="JavaScript" class="icon-svg">
+      <h2>JavaScript</h2>
+      <p>Básico</p>
+    </div>
+    <div class="skill-card">
+      <img src="icons/mysql.svg" alt="MySQL" class="icon-svg">
+      <h2>MySQL</h2>
+      <p>Intermedio</p>
+    </div>
+    <div class="skill-card">
+      <img src="icons/java.svg" alt="Java" class="icon-svg">
+      <h2>Java</h2>
+      <p>Intermedio</p>
+    </div>
+    <div class="skill-card">
+      <img src="icons/html.svg" alt="HTML" class="icon-svg">
+      <h2>HTML</h2>
+      <p>Intermedio</p>
+    </div>
+    <div class="skill-card">
+      <img src="icons/css.svg" alt="CSS" class="icon-svg">
+      <h2>CSS</h2>
+      <p>Intermedio</p>
+    </div>
+    <div class="skill-card">
+      <img src="icons/tailwind.svg" alt="Tailwind CSS" class="icon-svg">
+      <h2>Tailwind CSS</h2>
+      <p>Intermedio</p>
+    </div>
+    <div class="skill-card">
+      <img src="icons/git.svg" alt="Git" class="icon-svg">
+      <h2>Git</h2>
+      <p>Intermedio</p>
+    </div>
+    <div class="skill-card">
+      <img src="icons/github.svg" alt="GitHub" class="icon-svg">
+      <h2>GitHub</h2>
+      <p>Intermedio</p>
+    </div>
+  </div>
+
+  <!-- Blandas -->
+  <div id="softSkills" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 hidden">
+    <div class="skill-card">
+      <img src="icons/liderazgo.svg" alt="Liderazgo" class="icon-svg">
+      <h2>Liderazgo</h2>
+    </div>
+    <div class="skill-card">
+      <img src="icons/adaptabilidad.svg" alt="Adaptabilidad" class="icon-svg">
+      <h2>Adaptabilidad</h2>
+    </div>
+    <div class="skill-card">
+      <img src="icons/resiliencia.svg" alt="Resiliencia" class="icon-svg">
+      <h2>Resiliencia</h2>
+    </div>
+    <div class="skill-card">
+      <img src="icons/creatividad.svg" alt="Pensamiento Creativo" class="icon-svg">
+      <h2>Pensamiento Creativo</h2>
+    </div>
+    <div class="skill-card">
+      <img src="icons/comunicacion.svg" alt="Comunicación" class="icon-svg">
+      <h2>Comunicación Asertiva</h2>
+    </div>
+    <div class="skill-card">
+      <img src="icons/empatia.svg" alt="Empatía" class="icon-svg">
+      <h2>Empatía</h2>
+    </div>
+    <div class="skill-card">
+      <img src="icons/presion.svg" alt="Trabajo bajo presión" class="icon-svg">
+      <h2>Trabajo bajo presión</h2>
+    </div>
+    <div class="skill-card">
+      <img src="icons/equipo.svg" alt="Trabajo en equipo" class="icon-svg">
+      <h2>Trabajo en equipo</h2>
+    </div>
+    <div class="skill-card">
+      <img src="icons/tiempo.svg" alt="Gestión del tiempo" class="icon-svg">
+      <h2>Gestión del tiempo</h2>
+    </div>
+  </div>
+</section>
+
+    <script src="js/switch.js"></script>
+    <script src="js/switchHabilidades.js"></script>
+    <script src="js/headerScroll.js"></script>
   </body>
 </html>
