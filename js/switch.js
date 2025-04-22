@@ -8,7 +8,7 @@ const header = document.getElementById('mainHeader');
 const quienSoy = document.getElementById('quien-soy');
 const background = document.getElementById('background-container');
 const contactame= document.getElementById('contactame')
-const btnContactanos= document.getElementById('btnContactanos')
+const btnContactanos= document.getElementById('sendBtn')
 
 const svgs = {
   night: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="star-icon" viewBox="0 0 16 16">

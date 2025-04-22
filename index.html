@@ -6,6 +6,7 @@
     <title>Daniel Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="icon" href="img/estrella.svg" type="image/x-icon">
   </head>
 
   <body
@@ -281,7 +282,7 @@
                 class="w-full px-4 py-2 rounded border border-gray-300 bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
                 required></textarea>
             </div>
-            <button id="btnContactanos" type="submit"
+            <button id="sendBtn" type="submit"
               class="bg-white hover:bg-gray-700 text-black px-6 py-2 rounded transition duration-300">Enviar</button>
           </form>
     
@@ -313,7 +314,11 @@
     </section>
     
     
-
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init('kBZ8EPMogUnhwf9rj'); // Reemplaza con tu user ID de EmailJS
+</script>
+    <script src="js/email.js"></script>
     <script src="js/switch.js"></script>
     <script src="js/switchHabilidades.js"></script>
   </body>
