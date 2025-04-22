@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body id="body" class="bg-black text-white p-5 transition-colors duration-300">
+    <header id="mainHeader" class="fixed top-0 left-0 w-full bg-black text-white z-50 transition-all duration-300 flex justify-between p-5">
+      <!-- Logo -->
+      <div id="Logo" class="flex justify-center items-center text-xl logo">
+        <img id="logoImg" src="img/logo-dark.svg" alt="Logo">
+        <div class="flex justify-center items-center nombre">
+          <div><h1>D</h1></div>
+          <div>
+            <p>
+              aniel Rodriguez <br />
+              eveloper
+            </p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <!-- Navegación -->
+      <nav id="Navegacion" class="flex justify-center items-center">
+        <ul class="flex space-x-6 justify-center items-center">
+          <li class="text-xl hover:text-blue-400"><a href="#quien-soy">Quién soy</a></li>
+          <li class="text-xl hover:text-blue-400"><a href="#skill">Skills</a></li>
+          <li class="text-xl hover:text-blue-400"><a href="#proyecto">Proyectos</a></li>
+          <li class="text-xl hover:text-blue-400"><a href="#contactame">Contactame</a></li>
+        </ul>
+      </nav>
+
+      <!-- Switch -->
+      <div id="boton" class="flex justify-center items-center">
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" value="" class="sr-only peer" id="toggleSwitch">
+          <div id="switchBackground" class="w-14 h-8 bg-white rounded-full transition-all duration-300"></div>
+          <div id="switchCircle" class="absolute left-1 top-1 w-6 h-6 bg-black rounded-full transition-transform transition-colors duration-300 peer-checked:translate-x-6"></div>
+        </label>
+        <span id="switchText" class="ml-4 text-lg w-16">Noche</span>
+      </div>
+    </header>
+
+    <section id="quien-soy">
+
+    </section>
+
+    <script src="js/switch.js">      
+    </script>
+    <script src="js/headerScroll.js">
+    </script>
+  </body>
+</html>
