@@ -7,6 +7,8 @@ const logoImg = document.getElementById('logoImg');
 const header = document.getElementById('mainHeader');
 const quienSoy = document.getElementById('quien-soy');
 const background = document.getElementById('background-container');
+const contactame= document.getElementById('contactame')
+const btnContactanos= document.getElementById('btnContactanos')
 
 const svgs = {
   night: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="star-icon" viewBox="0 0 16 16">
@@ -54,6 +56,23 @@ toggle.addEventListener('change', () => {
   header.classList.replace(isDay ? 'bg-black' : 'bg-white', isDay ? 'bg-white' : 'bg-black');
   header.classList.replace(isDay ? 'text-white' : 'text-black', isDay ? 'text-black' : 'text-white');
   quienSoy.classList.replace(isDay ? 'text-white' : 'text-black', isDay ? 'text-black' : 'text-white');
+  contactame.classList.replace(isDay ? 'text-white' : 'text-black', isDay ? 'text-black' : 'text-white');
+  btnContactanos.classList.replace(isDay ? 'text-black' : 'text-white', isDay ? 'text-white' : 'text-black');
+  contactame.classList.replace(isDay ? 'bg-black' : 'bg-white', isDay ? 'bg-white' : 'bg-black');
+  btnContactanos.classList.replace(isDay ? 'bg-white' : 'bg-black', isDay ? 'bg-black' : 'bg-white');
+
+  // Cambiar botón de habilidades
+const toggleSkillsBtn = document.getElementById('toggleSkills');
+toggleSkillsBtn.classList.replace(isDay ? 'bg-white' : 'bg-black', isDay ? 'bg-black' : 'bg-white');
+toggleSkillsBtn.classList.replace(isDay ? 'text-black' : 'text-white', isDay ? 'text-white' : 'text-black');
+
+// Cambiar las tarjetas de skills
+const skillCards = document.querySelectorAll('.skill-card');
+skillCards.forEach(card => {
+  card.classList.replace(isDay ? 'bg-gray-800' : 'bg-white', isDay ? 'bg-white' : 'bg-gray-800');
+  card.classList.replace(isDay ? 'text-white' : 'text-black', isDay ? 'text-black' : 'text-white');
+});
+
 
   logoImg.src = isDay ? 'img/logo-light.svg' : 'img/logo-dark.svg';
 
