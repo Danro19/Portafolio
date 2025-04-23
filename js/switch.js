@@ -9,6 +9,8 @@ const quienSoy = document.getElementById('quien-soy');
 const background = document.getElementById('background-container');
 const contactame= document.getElementById('contactame')
 const btnContactanos= document.getElementById('sendBtn')
+const proyectos = document.getElementById("subtitulo")
+
 
 const svgs = {
   night: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="star-icon" viewBox="0 0 16 16">
@@ -60,6 +62,7 @@ toggle.addEventListener('change', () => {
   btnContactanos.classList.replace(isDay ? 'text-black' : 'text-white', isDay ? 'text-white' : 'text-black');
   contactame.classList.replace(isDay ? 'bg-black' : 'bg-white', isDay ? 'bg-white' : 'bg-black');
   btnContactanos.classList.replace(isDay ? 'bg-white' : 'bg-black', isDay ? 'bg-black' : 'bg-white');
+  proyectos.classList.replace(isDay ? 'text-white': 'text-black', isDay ? 'text-black' :'text-white');
 
   // Cambiar botón de habilidades
 const toggleSkillsBtn = document.getElementById('toggleSkills');

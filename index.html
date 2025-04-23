@@ -11,20 +11,20 @@
 
   <body
     id="body"
-    class="bg-black text-white p-5 transition-colors duration-300 flex items-center flex-col "
+    class="bg-black text-white p-2 sm:p-5 transition-colors duration-300 flex items-center flex-col"
   >
     <div id="background-container"></div>
     <header
       id="mainHeader"
-      class="fixed top-0 left-0 w-full bg-black bg-opacity-80 text-white z-50 transition-all duration-300 ease-in-out transform flex justify-between p-5"
+      class="fixed top-0 left-0 w-full bg-black bg-opacity-80 text-white z-50 transition-all duration-300 ease-in-out transform flex flex-col md:flex-row justify-between p-3 md:p-5"
     >
       <!-- Logo -->
       <div id="Logo" class="flex justify-center items-center text-xl logo">
-        <img id="logoImg" src="img/logo-dark.svg" alt="Logo" />
+        <img id="logoImg" src="img/logo-dark.svg" alt="Logo" class="h-8 md:h-auto" />
         <div class="flex justify-center items-center nombre">
           <div><h1>D</h1></div>
           <div>
-            <p>
+            <p class="text-sm md:text-base">
               aniel Rodriguez <br />
               eveloper
             </p>
@@ -33,25 +33,25 @@
       </div>
 
       <!-- Navegación -->
-      <nav id="Navegacion" class="flex justify-center items-center">
-        <ul class="flex space-x-6 justify-center items-center">
-          <li class="text-xl hover:text-blue-400">
+      <nav id="Navegacion" class="flex justify-center items-center mt-3 md:mt-0">
+        <ul class="flex flex-wrap space-x-2 md:space-x-6 justify-center items-center">
+          <li class="text-base md:text-xl hover:text-blue-400">
             <a href="#quien-soy">Quién soy</a>
           </li>
-          <li class="text-xl hover:text-blue-400">
+          <li class="text-base md:text-xl hover:text-blue-400">
             <a href="#skills">Skills</a>
           </li>
-          <li class="text-xl hover:text-blue-400">
+          <li class="text-base md:text-xl hover:text-blue-400">
             <a href="#proyecto">Proyectos</a>
           </li>
-          <li class="text-xl hover:text-blue-400">
+          <li class="text-base md:text-xl hover:text-blue-400">
             <a href="#contactame">Contactame</a>
           </li>
         </ul>
       </nav>
 
       <!-- Switch -->
-      <div id="boton" class="flex justify-center items-center">
+      <div id="boton" class="flex justify-center items-center mt-3 md:mt-0">
         <label class="relative inline-flex items-center cursor-pointer">
           <input
             type="checkbox"
@@ -61,68 +61,59 @@
           />
           <div
             id="switchBackground"
-            class="w-14 h-8 bg-white rounded-full transition-all duration-300"
+            class="w-12 md:w-14 h-6 md:h-8 bg-white rounded-full transition-all duration-300"
           ></div>
           <div
             id="switchCircle"
-            class="absolute left-1 top-1 w-6 h-6 bg-black border-black rounded-full transition-transform transition-colors duration-300 peer-checked:translate-x-6"
+            class="absolute left-1 top-1 w-4 md:w-6 h-4 md:h-6 bg-black border-black rounded-full transition-transform transition-colors duration-300 peer-checked:translate-x-6"
           ></div>
         </label>
-        <span id="switchText" class="ml-4 text-lg w-16">Noche</span>
+        <span id="switchText" class="ml-2 md:ml-4 text-base md:text-lg w-12 md:w-16">Noche</span>
       </div>
     </header>
 
     <section
       id="quien-soy"
-      class="flex flex-col items-center text-white pt-44 gap-16"
+      class="flex flex-col items-center text-white pt-32 md:pt-44 gap-8 md:gap-16 px-4"
     >
-      <div class="flex justify-center gap-16">
+      <div class="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
         <div class="descripcionPerfil flex justify-center flex-col">
-          <h1>Daniel Orlando Rodriguez Ramirez</h1>
-          <h2>Desarrollador Backend</h2>
+          <h1 class="text-xl md:text-2xl lg:text-3xl">Daniel Orlando Rodriguez Ramirez</h1>
+          <h2 class="text-lg md:text-xl lg:text-2xl">Desarrollador Backend</h2>
           <br />
 
-          <p>
+          <p class="text-sm md:text-base">
             Desarrollador Backend con experiencia en lenguajes como Python,
-            JavaScript, MySQL y Java, especializado en <br />
+            JavaScript, MySQL y Java, especializado en 
             proyectos web. Manejo de metodologías ágiles como Scrum y Kanban,
-            con un enfoque en la entrega de soluciones <br />
+            con un enfoque en la entrega de soluciones 
             de calidad en tiempo y forma. A lo largo de mi formación, he
-            gestionado equipos de trabajo, demostrando habilidades <br />
+            gestionado equipos de trabajo, demostrando habilidades 
             de liderazgo, como la escucha activa, la comunicación asertiva y el
-            pensamiento divergente. Estas habilidades blandas <br />
+            pensamiento divergente. Estas habilidades blandas 
             han sido clave para lograr una colaboración efectiva en el
-            desarrollo de proyectos, optimizando los procesos y <br />
+            desarrollo de proyectos, optimizando los procesos y 
             alcanzando los objetivos establecidos.
           </p>
         </div>
         <div class="imagenPerfil">
-          <img src="" alt="dat" />
+          <img src="/placeholder.svg" alt="dat" class="max-w-full h-auto" />
         </div>
       </div>
-      <div id="Video" class="text-white">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/Q8HFO4dKIHs?si=W5CQ8m7dMRKelCl0"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+      <div id="Video" class="text-white w-full overflow-hidden">
+        <iframe class="w-full max-w-full h-auto aspect-video" src="https://www.youtube.com/embed/JKY2ivVE1Ig?si=50A7vGbspM2Bo4VA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="mt-24 px-10">
-      <h1 class="text-3xl font-bold text-center mb-8">Habilidades Técnicas</h1>
+    <section id="skills" class="mt-16 md:mt-24 px-4 md:px-10 w-full">
+      <h1 class="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">Habilidades Técnicas</h1>
 
       <!-- Switch -->
-      <div class="flex justify-center mb-10">
+      <div class="flex justify-center mb-6 md:mb-10">
         <button
           id="toggleSkills"
-          class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-800 transition"
+          class="bg-white text-black px-4 md:px-6 py-1 md:py-2 rounded-full hover:bg-gray-800 transition text-sm md:text-base"
         >
           Habilidades Blandas
         </button>
@@ -130,181 +121,261 @@
 
       <!-- Técnicas -->
       <div
-        id="techSkills"
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-      >
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/python.svg" alt="Python" class="icon-svg" />
-          <h2>Python</h2>
-          <p>Básico</p>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/javascript.svg" alt="JavaScript" class="icon-svg" />
-          <h2>JavaScript</h2>
-          <p>Básico</p>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/mysql.svg" alt="MySQL" class="icon-svg" />
-          <h2>MySQL</h2>
-          <p>Intermedio</p>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/java.svg" alt="Java" class="icon-svg" />
-          <h2>Java</h2>
-          <p>Intermedio</p>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/html.svg" alt="HTML" class="icon-svg" />
-          <h2>HTML</h2>
-          <p>Intermedio</p>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/css.svg" alt="CSS" class="icon-svg" />
-          <h2>CSS</h2>
-          <p>Intermedio</p>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/tailwind.svg" alt="Tailwind CSS" class="icon-svg" />
-          <h2>Tailwind CSS</h2>
-          <p>Intermedio</p>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/git.svg" alt="Git" class="icon-svg" />
-          <h2>Git</h2>
-          <p>Intermedio</p>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/github.svg" alt="GitHub" class="icon-svg" />
-          <h2>GitHub</h2>
-          <p>Intermedio</p>
-        </div>
+      id="techSkills"
+      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4"
+    >
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/python.svg" alt="Python" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">Python</h2>
+        <p class="text-xs md:text-sm">Básico</p>
       </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/javascript.svg" alt="JavaScript" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">JavaScript</h2>
+        <p class="text-xs md:text-sm">Básico</p>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/mysql.svg" alt="MySQL" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">MySQL</h2>
+        <p class="text-xs md:text-sm">Intermedio</p>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/java.svg" alt="Java" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">Java</h2>
+        <p class="text-xs md:text-sm">Intermedio</p>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/html.svg" alt="HTML" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">HTML</h2>
+        <p class="text-xs md:text-sm">Intermedio</p>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/css.svg" alt="CSS" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">CSS</h2>
+        <p class="text-xs md:text-sm">Intermedio</p>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/tailwind.svg" alt="Tailwind CSS" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">Tailwind CSS</h2>
+        <p class="text-xs md:text-sm">Intermedio</p>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/git.svg" alt="Git" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">Git</h2>
+        <p class="text-xs md:text-sm">Intermedio</p>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/github.svg" alt="GitHub" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">GitHub</h2>
+        <p class="text-xs md:text-sm">Intermedio</p>
+      </div>
+    </div>
+  
+    <!-- Blandas -->
+    <div
+      id="softSkills"
+      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 hidden"
+    >
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/liderazgo.svg" alt="Liderazgo" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">Liderazgo</h2>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img
+          src="icons/adaptabilidad.svg"
+          alt="Adaptabilidad"
+          class="icon-svg w-8 h-8 md:w-10 md:h-10"
+        />
+        <h2 class="text-sm md:text-base">Adaptabilidad</h2>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/resiliencia.svg" alt="Resiliencia" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">Resiliencia</h2>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img
+          src="icons/creatividad.svg"
+          alt="Pensamiento Creativo"
+          class="icon-svg w-8 h-8 md:w-10 md:h-10"
+        />
+        <h2 class="text-sm md:text-base">Pensamiento Creativo</h2>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img
+          src="icons/comunicacion.svg"
+          alt="Comunicación"
+          class="icon-svg w-8 h-8 md:w-10 md:h-10"
+        />
+        <h2 class="text-sm md:text-base">Comunicación Asertiva</h2>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img src="icons/empatia.svg" alt="Empatía" class="icon-svg w-8 h-8 md:w-10 md:h-10" />
+        <h2 class="text-sm md:text-base">Empatía</h2>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img
+          src="icons/presion.svg"
+          alt="Trabajo bajo presión"
+          class="icon-svg w-8 h-8 md:w-10 md:h-10"
+        />
+        <h2 class="text-sm md:text-base">Trabajo bajo presión</h2>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img
+          src="icons/equipo.svg"
+          alt="Trabajo en equipo"
+          class="icon-svg w-8 h-8 md:w-10 md:h-10"
+        />
+        <h2 class="text-sm md:text-base">Trabajo en equipo</h2>
+      </div>
+      <div class="skill-card bg-black bg-opacity-10 p-2 md:p-3">
+        <img
+          src="icons/tiempo.svg"
+          alt="Gestión del tiempo"
+          class="icon-svg w-8 h-8 md:w-10 md:h-10"
+        />
+        <h2 class="text-sm md:text-base">Gestión del tiempo</h2>
+      </div>
+    </div>
+  </section>
 
-      <!-- Blandas -->
-      <div
-        id="softSkills"
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 hidden"
-      >
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/liderazgo.svg" alt="Liderazgo" class="icon-svg" />
-          <h2>Liderazgo</h2>
+    <section id="proyecto" class="bg-black bg-opacity-10 py-10 md:py-16 px-4 mt-16 md:mt-24 text-white w-full">
+      <h2 id="subtitulo" class="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white dark:text-purple-400 mb-8 md:mb-12">Proyectos</h2>
+      
+      <div class="grid gap-6 md:gap-10 md:grid-cols-2 max-w-6xl mx-auto">
+    
+        <!-- Hotel Carmen -->
+        <div class="bg-gray-100 dark:bg-gray-900 rounded-2xl shadow-md p-4 md:p-6 transition-transform transform hover:scale-105 hover:shadow-lg">
+          <a href="https://github.com/Danro19/HOTEL-CARMEN">
+            <h3 class="text-xl md:text-2xl font-semibold text-black dark:text-white mb-3 md:mb-4">Hotel Carmen</h3>
+            <img src="img/HotelCarme.png" alt="Hotel-carmen" class="rounded-lg mb-3 md:mb-4 w-full h-auto">
+            <h4 class="text-base md:text-lg font-medium text-blue-600 dark:text-purple-400 mb-2">Tecnologías</h4>
+            <div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4 flex-wrap">
+              <div class="flex flex-col items-center">
+                <img src="icons/html.svg" alt="HTML" class="w-6 h-6 md:w-8 md:h-8">
+                <span class="text-xs md:text-sm text-black dark:text-white">HTML</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="icons/css.svg" alt="CSS" class="w-6 h-6 md:w-8 md:h-8">
+                <span class="text-xs md:text-sm text-black dark:text-white">CSS</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="icons/javascript.svg" alt="JavaScript" class="w-6 h-6 md:w-8 md:h-8">
+                <span class="text-xs md:text-sm text-black dark:text-white">JavaScript</span>
+              </div>
+            </div>
+            <p class="text-sm md:text-base text-gray-800 dark:text-gray-300">Sitio web completo para un hotel de lujo en Islas del Rosario. Diseño y backend funcional.</p>
+          </a>
         </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img
-            src="icons/adaptabilidad.svg"
-            alt="Adaptabilidad"
-            class="icon-svg"
-          />
-          <h2>Adaptabilidad</h2>
+    
+        <!-- SISGESA -->
+        <div class="bg-gray-100 dark:bg-gray-900 rounded-2xl shadow-md p-4 md:p-6 transition-transform transform hover:scale-105 hover:shadow-lg">
+          <a href="https://github.com/Danro19/Sistema-gestion-asistencia-academica">
+            <h3 class="text-xl md:text-2xl font-semibold text-black dark:text-white mb-3 md:mb-4">Sistema de Gestión Asistencia Académica "SISGESA"</h3>
+            <img src="img/SISGESA.png" alt="sisgesa" class="rounded-lg mb-3 md:mb-4 w-full h-auto">
+            <h4 class="text-base md:text-lg font-medium text-blue-600 dark:text-purple-400 mb-2">Tecnologías</h4>
+            <div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4 flex-wrap">
+              <div class="flex flex-col items-center">
+                <img src="icons/python.svg" alt="Python" class="w-6 h-6 md:w-8 md:h-8">
+                <span class="text-xs md:text-sm text-black dark:text-white">Python</span>
+              </div>
+            </div>
+            <p class="text-sm md:text-base text-gray-800 dark:text-gray-300">SISGESA es un sistema de gestión de asistencia académica desarrollado para ACME Education, una institución educativa dedicada a la formación técnica y profesional.</p>
+          </a>
         </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/resiliencia.svg" alt="Resiliencia" class="icon-svg" />
-          <h2>Resiliencia</h2>
+    
+        <!-- Ambientalistas -->
+        <div class="bg-gray-100 dark:bg-gray-900 rounded-2xl shadow-md p-4 md:p-6 transition-transform transform hover:scale-105 hover:shadow-lg">
+          <a href="https://github.com/Danro19/Los_Ambientalistas">
+            <h3 class="text-xl md:text-2xl font-semibold text-black dark:text-white mb-3 md:mb-4">Los Ambientalistas</h3>
+            <img src="img/Ambientalistas.jpg" alt="ambientalistas" class="rounded-lg mb-3 md:mb-4 w-full h-auto">
+            <h4 class="text-base md:text-lg font-medium text-blue-600 dark:text-purple-400 mb-2">Tecnologías</h4>
+            <div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4 flex-wrap">
+              <div class="flex flex-col items-center">
+                <img src="icons/mysql.svg" alt="MySQL" class="w-6 h-6 md:w-8 md:h-8">
+                <span class="text-xs md:text-sm text-black dark:text-white">MySQL</span>
+              </div>
+            </div>
+            <p class="text-sm md:text-base text-gray-800 dark:text-gray-300">Sistema de administración de parques naturales, especies, personal y visitantes. Facilita el seguimiento y control de biodiversidad.</p>
+          </a>
         </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img
-            src="icons/creatividad.svg"
-            alt="Pensamiento Creativo"
-            class="icon-svg"
-          />
-          <h2>Pensamiento Creativo</h2>
+    
+        <!-- Planificador Bodas -->
+        <div class="bg-gray-100 dark:bg-gray-900 rounded-2xl shadow-md p-4 md:p-6 transition-transform transform hover:scale-105 hover:shadow-lg">
+          <a href="https://github.com/Danro19/Captura-Emociones-PlanificadordeBodas">
+            <h3 class="text-xl md:text-2xl font-semibold text-black dark:text-white mb-3 md:mb-4">Captura Emociones - Planificador de Bodas</h3>
+            <img src="img/PlanificadorBodas.png" alt="planificador-boda" class="rounded-lg mb-3 md:mb-4 w-full h-auto">
+            <h4 class="text-base md:text-lg font-medium text-blue-600 dark:text-purple-400 mb-2">Tecnologías</h4>
+            <div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4 flex-wrap">
+              <div class="flex flex-col items-center">
+                <img src="icons/html.svg" alt="HTML" class="w-6 h-6 md:w-8 md:h-8">
+                <span class="text-xs md:text-sm text-black dark:text-white">HTML</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="icons/css.svg" alt="CSS" class="w-6 h-6 md:w-8 md:h-8">
+                <span class="text-xs md:text-sm text-black dark:text-white">CSS</span>
+              </div>
+            </div>
+            <p class="text-sm md:text-base text-gray-800 dark:text-gray-300">Landing page para un sitio web de planificación de bodas.</p>
+          </a>
         </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img
-            src="icons/comunicacion.svg"
-            alt="Comunicación"
-            class="icon-svg"
-          />
-          <h2>Comunicación Asertiva</h2>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img src="icons/empatia.svg" alt="Empatía" class="icon-svg" />
-          <h2>Empatía</h2>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img
-            src="icons/presion.svg"
-            alt="Trabajo bajo presión"
-            class="icon-svg"
-          />
-          <h2>Trabajo bajo presión</h2>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img
-            src="icons/equipo.svg"
-            alt="Trabajo en equipo"
-            class="icon-svg"
-          />
-          <h2>Trabajo en equipo</h2>
-        </div>
-        <div class="skill-card bg-black bg-opacity-10">
-          <img
-            src="icons/tiempo.svg"
-            alt="Gestión del tiempo"
-            class="icon-svg"
-          />
-          <h2>Gestión del tiempo</h2>
-        </div>
+    
       </div>
     </section>
-
-    <section id="proyecto">
-
-    </section>
-
-    <section id="contactame" class="bg-black bg-opacity-80 text-gray-800 text-white py-16 px-6 transition-all duration-500 mt-24 text-white">
+    
+    <section id="contactame" class="bg-black bg-opacity-80 text-white py-10 md:py-16 px-4 md:px-6 transition-all duration-500 mt-16 md:mt-24 w-full">
       <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl font-bold mb-4 text-center">Contáctame</h1>
-        <p class="text-lg mb-8 text-center">
+        <h1 class="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-center">Contáctame</h1>
+        <p class="text-base md:text-lg mb-6 md:mb-8 text-center">
           Si estás buscando un desarrollador que vea el mundo diferente, no dudes en contactarme.
         </p>
-        <hr class="border-gray-300 dark:border-gray-700 mb-12">
+        <hr class="border-gray-300 dark:border-gray-700 mb-8 md:mb-12">
     
-        <div class="grid md:grid-cols-2 gap-12">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
           <!-- Formulario -->
-          <form class="space-y-6" id="contact-form">
-            <h2 class="text-2xl font-semibold">Envia tu mensaje</h2>
+          <form class="space-y-4 md:space-y-6" id="contact-form">
+            <h2 class="text-xl md:text-2xl font-semibold">Envia tu mensaje</h2>
             <div>
-              <label for="name" class="block mb-1">Nombre</label>
+              <label for="name" class="block mb-1 text-sm md:text-base">Nombre</label>
               <input type="text" id="name" name="nombre"
-                class="w-full px-4 py-2 rounded border border-gray-300 bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                class="w-full px-3 md:px-4 py-2 rounded border border-gray-300 bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 text-sm md:text-base"
                 required>
             </div>
             <div>
-              <label for="email" class="block mb-1">Correo Electrónico</label>
+              <label for="email" class="block mb-1 text-sm md:text-base">Correo Electrónico</label>
               <input type="email" id="email" name="email"
-                class="w-full px-4 py-2 rounded border border-gray-300 bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                class="w-full px-3 md:px-4 py-2 rounded border border-gray-300 bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 text-sm md:text-base"
                 required>
             </div>
             <div>
-              <label for="mensaje" class="block mb-1">Mensaje</label>
+              <label for="mensaje" class="block mb-1 text-sm md:text-base">Mensaje</label>
               <textarea id="mensaje" name="mensaje" rows="4"
-                class="w-full px-4 py-2 rounded border border-gray-300 bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                class="w-full px-3 md:px-4 py-2 rounded border border-gray-300 bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 text-sm md:text-base"
                 required></textarea>
             </div>
             <button id="sendBtn" type="submit"
-              class="bg-white hover:bg-gray-700 text-black px-6 py-2 rounded transition duration-300">Enviar</button>
+              class="bg-white hover:bg-gray-700 text-black px-4 md:px-6 py-1 md:py-2 rounded transition duration-300 text-sm md:text-base">Enviar</button>
           </form>
     
           <!-- Redes Sociales -->
           <div>
-            <h2 class="text-2xl font-semibold mb-4">Conectemos</h2>
-            <ul class="space-y-4">
+            <h2 class="text-xl md:text-2xl font-semibold mb-4">Conectemos</h2>
+            <ul class="space-y-3 md:space-y-4">
               <li>
                 <a href="https://github.com/Danro19" class="flex items-center space-x-2 hover:text-gray-400 transition">
-                  <img src="icons/github.svg" alt="GitHub" class="w-6 h-6"> <span>GitHub</span>
+                  <img src="icons/github.svg" alt="GitHub" class="w-5 h-5 md:w-6 md:h-6"> <span class="text-sm md:text-base">GitHub</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/daniel-rodriguez-895437320/"
                   class="flex items-center space-x-2 hover:text-gray-400 transition">
-                  <img src="icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6"> <span>LinkedIn</span>
+                  <img src="icons/linkedin.svg" alt="LinkedIn" class="w-5 h-5 md:w-6 md:h-6"> <span class="text-sm md:text-base">LinkedIn</span>
                 </a>
               </li>
               <li>
                 <a href="https://api.whatsapp.com/send?phone=573022945334&text=Hola-deseo-obtener-mas-informacion"
                   class="flex items-center space-x-2 hover:text-gray-400 transition">
-                  <img src="icons/icons8-whatsapp.svg" alt="WhatsApp" class="w-6 h-6"> <span>WhatsApp</span>
+                  <img src="icons/icons8-whatsapp.svg" alt="WhatsApp" class="w-5 h-5 md:w-6 md:h-6"> <span class="text-sm md:text-base">WhatsApp</span>
                 </a>
               </li>
             </ul>
@@ -313,11 +384,10 @@
       </div>
     </section>
     
-    
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  emailjs.init('kBZ8EPMogUnhwf9rj'); // Reemplaza con tu user ID de EmailJS
-</script>
+    <script>
+      emailjs.init('kBZ8EPMogUnhwf9rj'); // Reemplaza con tu user ID de EmailJS
+    </script>
     <script src="js/email.js"></script>
     <script src="js/switch.js"></script>
     <script src="js/switchHabilidades.js"></script>
