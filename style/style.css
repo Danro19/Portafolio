@@ -1,0 +1,128 @@
+* {
+  font-family: serif;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+.nombre {
+  position: relative;
+  right: 40px;
+  line-height: 1;
+}
+
+.logo {
+  color: #1aacbe;
+}
+.logo h1 {
+  font-size: 4rem;
+  font-family: serif;
+}
+
+#quien-soy {
+  width: 80vw;
+}
+
+#quien-soy h1 {
+  font-size: 4rem;
+  color: #1aacbe;
+}
+
+#quien-soy h2 {
+  font-size: 2rem;
+  color: #1aacbe;
+}
+
+.imagenPerfil img {
+  width: 25vw;
+  height: 25vw;
+  border: 2px solid fuchsia;
+}
+
+#background-container {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.star-icon {
+  animation: twinkle 4s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatCloud {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(110vw);
+    opacity: 0.5;
+  }
+}
+.cloud-icon {
+  position: absolute;
+  animation: twinkle 5s infinite ease-in-out alternate;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -10;
+}
+
+.skill-card {
+
+  position: relative;
+  overflow: hidden;
+  min-height: 180px; /* Ajusta según necesidad */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-card::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.205),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.7s ease-in-out;
+}
+
+.skill-card:hover::after {
+  top: 100%;
+  left: 100%;
+}
+
+.icon-svg {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 10px;
+}
