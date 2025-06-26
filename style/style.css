@@ -33,9 +33,9 @@
 }
 
 .imagenPerfil img {
-  width: 25vw;
+  width: 100vw;
   height: 25vw;
-  border: 2px solid fuchsia;
+  border-radius: 30vw;
 }
 
 #background-container {
